@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #f4f8fb;
+            color: #333;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        header img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-bottom: 5px solid #033e8c;
+        }
+        nav {
+            background-color: #033e8c;
+            text-align: center;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav button {
+            background: white;
+            color: #033e8c;
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        nav button:hover {
+            background: #004080;
+            color: white;
+        }
+        #buscador {
+            margin: 20px auto;
+            display: block;
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .card h2 {
+            color: #004080;
+        }
+        .galeria img, .carreras-img img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .mapa iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="cbtis.jpeg" width="75%"CBTis 101 fachada">
+    <h1>CBTis No. 101</h1>
+    <p>Motzorongo, Veracruz</p>
+</header>
+
+<nav>
+    <button onclick="mostrar('historia')">Historia</button>
+    <button onclick="mostrar('mision')">Misión y Visión</button>
+    <button onclick="mostrar('carreras')">Carreras</button>
+    <button onclick="mostrar('instalaciones')">Instalaciones</button>
+    <button onclick="mostrar('actividades')">Actividades</button>
+    <button onclick="mostrar('galeria')">Galería</button>
+    <button onclick="mostrar('ubicacion')">Ubicación</button>
+    <button onclick="mostrar('contacto')">Contacto</button>
+</nav>
+
+<input type="text" id="buscador" onkeyup="buscarContenido()" placeholder="Buscar en la página...">
+
+<section class="card" id="historia">
+    <h2>Historia</h2>
+    <p>El CBTis No. 101 fue fundado en la década de los 80 en respuesta a la necesidad de educación técnica en Motzorongo, Veracruz. Desde entonces, ha graduado a miles de estudiantes que ahora se desempeñan en industrias, hospitales, empresas y centros de investigación en todo el país. La institución ha evolucionado continuamente, adaptándose a las nuevas tecnologías y demandas del mundo laboral.</p>
+    <p>Motzorongo es una comunidad con fuerte identidad cultural y vocación industrial-agrícola, lo que convierte al CBTis 101 en un pilar fundamental para el desarrollo económico y profesional de sus habitantes.</p>
+</section>
+
+<section class="card" id="mision">
+    <h2>Misión y Visión</h2>
+    <p><strong>Misión:</strong> Brindar una educación tecnológica integral, fomentando valores, conocimientos científicos y habilidades prácticas que permitan a nuestros estudiantes desarrollarse como ciudadanos responsables, críticos y productivos.</p>
+    <p><strong>Visión:</strong> Ser una institución reconocida por su excelencia académica, innovación educativa y compromiso con la comunidad, formando líderes técnicos capaces de transformar su entorno y competir globalmente.</p>
+</section>
+
+<section class="card carreras-img" id="carreras">
+    <h2>Carreras Técnicas</h2>
+    <ul>
+        <li><strong>Mecánica Industrial:</strong> Capacita al estudiante en el diseño, instalación y mantenimiento de sistemas mecánicos. Esta carrera es vital para el funcionamiento de industrias manufactureras y metalúrgicas. <br> <em>Ventajas:</em> alta demanda laboral, buen salario, posibilidad de autoempleo. <br><img src="meca.jpeg" alt="Mecánica Industrial"></li>
+        <li><strong>Producción Industrial de Alimentos:</strong> Enseña técnicas para transformar materias primas en productos comestibles seguros y nutritivos. Fundamental para la seguridad alimentaria. <br> <em>Ventajas:</em> trabajo en fábricas de alimentos, empresas de control de calidad, emprendimiento en el sector alimenticio. <br><img src="aliemtos campaña.jpeg" alt="Producción de Alimentos"></li>
+        <li><strong>Contabilidad:</strong> Forma técnicos capaces de registrar, analizar y presentar información financiera clave para la toma de decisiones en empresas públicas y privadas. <br> <em>Ventajas:</em> amplio campo laboral, base sólida para estudiar administración o finanzas, posibilidad de consultoría. <br><img src="taller de conta.jpeg" alt="Contabilidad"></li>
+        <li><strong>Laboratorista Clínico:</strong> Enseña la recolección y análisis de muestras biológicas para ayudar en el diagnóstico médico. <br> <em>Ventajas:</em> empleo en hospitales, laboratorios, clínicas y centros de investigación; gran aporte a la salud pública. <br><img src="laboratorio.jpeg" alt="Laboratorista Clínico"></li>
+    </ul>
+</section>
+
+<section class="card" id="instalaciones">
+    <h2>Instalaciones</h2>
+    <p>El CBTis 101 cuenta con talleres de alta especialización, laboratorios equipados, talleres con equipo profesional supervisados por un experto en la cada especialidad , contamos con una cafeteria, canchas de futbol y basquetbol, damos importancia a las costumbres y tradiciones en nuestra localidad, queremos que nuestras intalaciones sean un lugar adecuado pra su hijos nuestros maestros y personal del de la escuela nos aseguraremos que tenga una eduacion digna, seria un gran gusto que su hijo ingrese a nuestras instalaciones.</p>
+</section>
+
+<section class="card" id="actividades">
+    <h2>Actividades</h2>
+    <ul>
+        <li>Eventos deportivos interescolares</li>
+        <li>programa anti drogas y coferencias</li>
+        <li>Ferias tecnológicas y de emprendimiento</li>
+        <li>Participación en olimpiadas académicas y concursos nacionales</li>
+    </ul>
+</section>
+
+<section class="card galeria" id="galeria">
+    <h2>Galería</h2>
+    <img src="explanada.jpeg" alt="CBTis 101">
+    <img src="profesores.jpeg" alt="Estudiantes">
+    <img src="esc.jpeg" alt="Instalaciones CBTis">
+</section>
+
+<section class="card" id="ubicacion">
+    <h2>Ubicación</h2>
+    <p>Estamos en Motzorongo, Veracruz. Una comunidad reconocida por su dedicación a la industria azucarera y cafetalera, con gente trabajadora y solidaria. CBTis 101 impulsa la educación y el desarrollo de la región.</p>
+    <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.237074173306!2d-96.70617418511156!3d18.59040478737879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85da1f3df2d42667%3A0x4e56b87549a3e4f3!2sCBTIS%20101!5e0!3m2!1ses-419!2smx!4v1716576000000!5m2!1ses-419!2smx" allowfullscreen loading="lazy"></iframe>
+    </div>
+</section>
+
+<section class="card" id="contacto">
+    <h2>Contacto</h2>
+    <form>
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea rows="4" placeholder="Mensaje..." required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 CBTis No. 101 - Motzorongo, Veracruz | <a href="https://www.facebook.com/CBTIS101MOTZORONGO/?locale=es_LA" style="color:white">Facebook Oficial</a></p>
+</footer>
+
+<script>
+    function mostrar(id) {
+        const secciones = document.querySelectorAll('.card');
+        secciones.forEach(sec => sec.style.display = 'none');
+        document.getElementById(id).style.display = 'block';
+    }
+
+    function buscarContenido() {
+        const input = document.getElementById('buscador').value.toLowerCase();
+        const secciones = document.querySelectorAll('.card');
+        secciones.forEach(sec => {
+            if (sec.textContent.toLowerCase().includes(input)) {
+                sec.style.display = 'block';
+            } else {
+                sec.style.display = 'none';
+            }
+        });
+    }
+
+    mostrar('historia');
+</script>
+
+</body>
+</html>
+
